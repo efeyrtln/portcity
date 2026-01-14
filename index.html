@@ -1,171 +1,43 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>PortCity – Ana Sayfa</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: #f3f7fa;
-        }
- 
-        /* ÜST BAR - LOGO + NAVBAR */
-        .topbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(90deg,#005a9e,#008cdd);
-            padding: 10px 40px;
-        }
- 
-        .topbar img {
-            height: 60px;
-        }
- 
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .navbar a:hover { opacity: 0.7; }
- 
-        /* HERO BANNER */
-        .hero {
-            background: url("https://picsum.photos/1400/500?sea") center/cover no-repeat;
-            padding: 120px 20px;
-            text-align: center;
-            color: white;
-            text-shadow: 0 0 8px #000;
-        }
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
- 
-        /* CONTAINER */
-        .container {
-            width: 85%;
-            margin: auto;
-            padding: 30px 0;
-        }
- 
-        /* CARD */
-        .card {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
- 
-        /* TABLE */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        th, td {
-            padding: 12px;
-            border-bottom: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background: #005a9e;
-            color: white;
-        }
- 
-        /* FOOTER */
-        .footer {
-            background: #003b63;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>PortCity | Marina & Yaşam</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
- 
-<!-- LOGO + NAVBAR -->
-<div class="topbar">
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/PORTCITY2.png" alt="PortCity Logo">
-        </a>
-    </div>
- 
-    <div class="navbar">
-        <a href="index.html">Ana Sayfa</a>
-        <a href="about.html">Hakkında</a>
-        <a href="services.html">Aktiviteler</a>
-        <a href="contact.html">İletişim</a>
-    </div>
-</div>
- 
-<div class="hero">
-    <h1>PortCity'e Hoş Geldiniz</h1>
-    <p>Şehrin en yeni ve en modern marina bölgesini keşfedin.</p>
-    <p>Dalgaların Sesi, Şehrin Yeni Melodisi.</p>
-</div>
- 
-<div class="container">
- 
-    <div class="card">
-        <h2>Neden PortCity?</h2>
-        <p><b>PortCity</b>, <i>modern mimarisi,denizin kokusu</i> ve <u>sahil yaşam alanları</u> ile ziyaretçilere keyifli bir deneyim sunar.</p>
- 
-        <ul>
-            <li>Modern marina ve yat alanı</li>
-            <li>Geniş yürüyüş yolları</li>
-            <li>Kafe & restoran bölgesi</li>
-            <li>Şehirin Merkezi</li>
-        </ul>
-    </div>
- 
-    <div class="card">
-        <h2>Haftalık Etkinlik Programı</h2>
- 
-        <table>
-            <tr>
-                <th>Gün</th>
-                <th>Etkinlik</th>
-            </tr>
-            <tr>
-                <td>Pazartesi</td>
-                <td>Sahil Sabah Koşusu</td>
-            </tr>
-            <tr>
-                <td>Çarşamba</td>
-                <td>Amatör Balık Yarışması</td>
-            </tr>
-            <tr>
-                <td>Cuma</td>
-                <td>Gün Batımı Konseri</td>
-            </tr>
-            <tr>
-                <td>Cumartesi</td>
-                <td>Yat Sergisi</td>
-            </tr>
-            <tr>
+<body class="theme-light">
 
-            <td>Pazar</td>
-                <td>Cankurtaranlık Eğitimi</td>
-                </tr>
-        </table>
-    </div>
- 
-</div>
- 
-<div class="footer">
-    © 2025 PortCity | Tüm Hakları Saklıdır
-</div>
- 
+<header class="header">
+  <div class="logo">PortCity</div>
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html" class="active">Ana Sayfa</a></li>
+      <li><a href="about.html">Hakkımızda</a></li>
+      <li><a href="services.html">Hizmetler</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Denizin Kalbinde<br><span>Premium Yaşam</span></h1>
+  <p>PortCity ile marinada ayrıcalıklı bir deneyim.</p>
+  <button id="themeBtn">🎨 Tema Değiştir</button>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <button id="likeBtn">👍 Beğen</button>
+    <p>Toplam Beğeni: <span id="likeCount">0</span></p>
+  </div>
+
+  <div class="card image-card">
+    <img src="https://picsum.photos/600/400" id="mainImage" class="img" alt="PortCity">
+    <span>Görsele tıklayın</span>
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
- 
- 
+
